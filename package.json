@@ -31,10 +31,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "jsonServer": "json-server --watch data/db.json --port 7000",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage "
   },
   "eslintConfig": {
     "extends": [
