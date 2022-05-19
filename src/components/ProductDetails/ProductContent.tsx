@@ -10,18 +10,24 @@ export const ProductContent: React.FC<Product> = ({
 }) => {
   return (
     <HStack
+      flexDir={{ base: "column", xl: "row", lg: "row" }}
       w="full"
-      h="80vh"
+      h={{ base: "auto", xl: "80vh" }}
       justifyContent="center"
       p="6"
       borderWidth="2px"
       color="black"
-      gap="6"
+      gap="12"
     >
-      <Box boxSize={"lg"}>
-        <Image w="full" h="full" objectFit="contain" src={image} />
+      <Box boxSize={{ base: "60", xl: "lg", lg: "lg" }}>
+        <Image
+          w="full"
+          objectFit="contain"
+          src={image}
+          h={{ base: "full", xl: "full" }}
+        />
       </Box>
-      <Stack boxSize={"lg"} h="100%" gap="4" justifyContent="center">
+      <Stack h={{ base: "50%", xl: "full" }} gap="4" justifyContent="center">
         <Text as="h1" textStyle="h1">
           {title}
         </Text>
