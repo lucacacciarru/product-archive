@@ -35,7 +35,7 @@ In questa maniera la logica di recupero, l'aggiornamento o l'inserimento di un e
 
 All'interno dell'attributo filters saranno presenti due stringhe che sono quelle inerenti alla ricerca e filtraggio degli elementi.
 
-Sempre all'interno di questo state è presente `rollbackData`, è dello stesso tipo di data ed è facoltativo, verrà utilizzato nel momento in cui si eseguono operazioni di creazione/modifica/rimozione per **conservare** il valore precedente in caso sia necessario un **ripristino**, ad esempio quando una chiamata all'api andrà in failure. Ciò è stato fatto per avere un **[Optimistic UI](https://medium.com/vlk-studio/optimistic-ui-for-dummies-teoria-a76cc5dd584d)**, ovvero per avere un gestione ottimistica dello stato, in modo da migliorare la _User Experience_ e dare un riscontro immediato a determinata azioni sincrone che l'utente andrà ad effettuare.
+Sempre all'interno di questo state è presente `rollbackData`, è dello stesso tipo di data ed è facoltativo, verrà utilizzato nel momento in cui si eseguono operazioni di creazione/modifica/rimozione per **conservare** il valore precedente in caso sia necessario un **ripristino**, ad esempio quando una chiamata all'api andrà in failure. Ciò è stato fatto per avere un **[Optimistic UI](https://medium.com/vlk-studio/optimistic-ui-for-dummies-teoria-a76cc5dd584d)**, ovvero per avere un gestione ottimistica dello stato, in modo da migliorare la _User Experience_ e dare un riscontro immediato a determinata azioni asincrone che l'utente andrà ad effettuare.
 In questa maniera, quando si andranno a triggerare determinate action (come quelle di updateProduct) tramite le saga verrà effettuato il seguente processo:
 
 1.  Si effettua la richiesta al server di modifica del prodotto
