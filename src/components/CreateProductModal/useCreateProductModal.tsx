@@ -13,16 +13,6 @@ export function useCreateProductModal(onClose: () => void) {
     title: "",
   });
 
-  function resetProductInfo() {
-    setProductInfo({
-      category: "",
-      description: "",
-      image: "",
-      price: 0,
-      title: "",
-    });
-  }
-
   const requireFiled = useMemo(
     () => [productInfo.title, productInfo.description],
     [productInfo.description, productInfo.title]
@@ -36,7 +26,6 @@ export function useCreateProductModal(onClose: () => void) {
   function onClick() {
     createProduct(productInfo);
     onClose();
-    resetProductInfo();
   }
 
   return {

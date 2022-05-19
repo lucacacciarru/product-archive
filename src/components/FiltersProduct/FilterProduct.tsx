@@ -12,11 +12,12 @@ export const FilterProducts: React.FC = () => {
       <Text as="h2" textStyle="h2" mt="8">
         Filters
       </Text>
-      <HStack flexDir={{ base: "column", xl: "row" }} mt="4" gap="6">
-        <Box w={{ base: "full", xl: "md" }}>
+      <HStack mt="4" gap="6">
+        <Box w="md">
           <InputGroup flexDir="column">
             <InputContainer label="Product name">
               <Input
+                pr="4.5rem"
                 value={valueFilters.text}
                 onChange={onChangeText}
                 placeholder="Search product"
@@ -24,7 +25,7 @@ export const FilterProducts: React.FC = () => {
             </InputContainer>
           </InputGroup>
         </Box>
-        <Box w={{ base: "full" }} mt="8">
+        <Box w="md" mt="8">
           <InputGroup flexDir="column">
             <InputContainer label="Category">
               <CategoriesSelectInput

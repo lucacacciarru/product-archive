@@ -24,8 +24,9 @@ import {
   fetchSingleProductRequest,
   fetchSingleProductSuccess,
 } from "../action/fetchSingleProduct";
-import { updateFilters } from "../action/filters";
+import { resetFilters, updateFilters } from "../action/filters";
 import { updateFilterCase } from "./updateFilterCase";
+import { resetFilterCase } from "./resetFilterCase";
 
 const INITIAL_STATE: ProductState = {
   data: {
@@ -52,5 +53,6 @@ export const productRootReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(fetchSingleProductSuccess, fetchSingleProductCase.successCase)
     .addCase(fetchSingleProductFailure, fetchSingleProductCase.failureCase)
     .addCase(updateFilters, updateFilterCase)
+    .addCase(resetFilters, resetFilterCase)
     .addDefaultCase((state) => state);
 });
