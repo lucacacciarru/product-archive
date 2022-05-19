@@ -35,6 +35,6 @@ Lancia tutti i test e mostra il coverage
 //
 
 ### **Documentazione inerenti alle implementazioni eseguite**
-- [Store management](data/db.json)
+- [Store management](docs/storeManagment.md)
 - [Sistema di filtraggio](docs/filtering.md)
 - [Implementazioni in un caso reale](docs/futureChange.md)
