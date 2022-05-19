@@ -2,10 +2,10 @@ import { PayloadAction, Action } from "@reduxjs/toolkit";
 import { Product } from "./general";
 
 export enum UPDATE_PRODUCT_ACTION_TYPES {
-  TRIGGER = "product/update/trigger",
-  REQUEST = "product/update/request",
-  SUCCESS = "product/update/success",
-  FAILURE = "product/update/failure",
+  TRIGGER = "products/update/trigger",
+  REQUEST = "products/update/request",
+  SUCCESS = "products/update/success",
+  FAILURE = "products/update/failure",
 }
 
 export type UpdateProductPayload = {

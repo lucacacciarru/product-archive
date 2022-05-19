@@ -15,14 +15,20 @@ export const ProductSection: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <HStack justifyContent="space-between">
-        <Box>
+      <HStack
+        justifyContent="space-between"
+        flexDir={{ base: "column-reverse", xl: "row" }}
+        gap={{ base: "24", xl: "4" }}
+      >
+        <Box w={{ base: "full", lg: "auto", xl: "auto" }}>
           <Text textStyle="h1" as="h1">
             Products
           </Text>
           <FilterProducts />
         </Box>
-        <Button onClick={onOpen}>Add item</Button>
+        <Button w={{ base: "full", xl: "auto" }} onClick={onOpen}>
+          Add item
+        </Button>
       </HStack>
 
       <SimpleGrid minChildWidth="300px" spacing="24">
