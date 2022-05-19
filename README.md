@@ -32,7 +32,12 @@ Lancia tutti i test
 Lancia tutti i test e mostra il coverage
 
 ### **Coverage totale**
-//
+
+File                                                 | % Stmts | % Branch | % Funcs | % Lines |
+-----------------------------------------------------|---------|----------|---------|---------|
+All files                                            |   90.51 |    51.85 |   88.09 |   90.96 |  
+
+Puoi trovare il coverage dell'ultimo commit [qui](https://github.com/lucacacciarru/product-archive/actions/runs/2352681535)
 
 ### **Documentazione inerenti alle implementazioni eseguite**
 - [Store management](docs/storeManagment.md)
