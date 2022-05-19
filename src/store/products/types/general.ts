@@ -7,7 +7,7 @@ export type Product = {
   image: string;
 };
 
-export type ProductData = {
+export type ProductsData = {
   allIds: string[];
   byId: Record<string, Product>;
 };
@@ -18,7 +18,7 @@ export type Filters = {
 };
 
 export type ProductState = {
-  data: ProductData;
-  rollbackData?: ProductData;
+  data: ProductsData;
+  rollbackData?: ProductsData;
   filters: Filters;
 };

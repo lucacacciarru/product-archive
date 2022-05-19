@@ -3,10 +3,10 @@ import { Action } from "redux";
 import { Product } from "./general";
 
 export enum FETCH_PRODUCT_ACTION_TYPES {
-  TRIGGER = "product/fetch/trigger",
-  REQUEST = "product/fetch/request",
-  SUCCESS = "product/fetch/success",
-  FAILURE = "product/fetch/failure",
+  TRIGGER = "products/fetch/trigger",
+  REQUEST = "products/fetch/request",
+  SUCCESS = "products/fetch/success",
+  FAILURE = "products/fetch/failure",
 }
 
 export type FetchProductResponse = Product[];

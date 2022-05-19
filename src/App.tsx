@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./components";
-import { ProductDetails } from "./components/ProductDetails";
-import { Landing } from "./page";
+import { Landing, Product } from "./page";
 import { PATHS } from "./types";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <Routes>
         <Route path={PATHS.INDEX} element={<AppLayout />}>
           <Route index element={<Landing />} />
-          <Route path={`${PATHS.PRODUCT}/:id`} element={<ProductDetails />} />
+          <Route path={`${PATHS.PRODUCT}/:id`} element={<Product />} />
         </Route>
       </Routes>
     </div>
