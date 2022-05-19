@@ -8,7 +8,7 @@ export const AppLayout: React.FC = () => {
   return (
     <>
       <NavBar navHeight={NAV_HEIGHT} />
-      <Box pt={NAV_HEIGHT} px={{ base: "6", xl: "12" }}>
+      <Box pt={NAV_HEIGHT} px="16">
         <Outlet />
       </Box>
     </>

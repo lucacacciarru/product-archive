@@ -4,19 +4,16 @@ import coverHero from "./assets/coverHero.jpg";
 export const Hero: React.FC = () => {
   return (
     <HStack
-      h={{ base: "auto", xl: "80vh" }}
+      h="80vh"
       w="full"
       borderRadius="xl"
       bg="brand.primary.regular"
-      px={{ base: "6", xl: "20" }}
-      py="14"
-      gap="6"
+      px="20"
       justifyContent="space-between"
-      flexDir={{ base: "column", xl: "row" }}
     >
-      <Stack w={{ base: "100%", xl: "50%" }}>
+      <Stack w="50%">
         <Text textStyle="main" color="white.0">
-          Find whatever you want
+          Trova tutto ciò che ti serve
         </Text>
         <Text color="white.0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -24,7 +21,7 @@ export const Hero: React.FC = () => {
           quaerat!
         </Text>
       </Stack>
-      <Box h="70%" w={{ base: "100%", xl: "50%" }} overflow="hidden">
+      <Box w="50%" h="70%" overflow="hidden">
         <Image src={coverHero} w="full" h="full" objectFit="cover" />
       </Box>
     </HStack>
