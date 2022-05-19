@@ -5,22 +5,15 @@ import { CreateProductRequestAction } from "../../types/createProduct";
 export const requestCase: CaseReducer<
   ProductState,
   CreateProductRequestAction
-> = (state, action) => {
-  const newProductId = action.payload.id;
-
+> = (state) => {
   return {
     ...state,
     rollbackData: {
       ...state.data,
     },
-    data: {
-      allIds: [...state.data.allIds, newProductId],
-      byId: {
-        ...state.data.byId,
-        [newProductId]: {
-          ...action.payload,
-        },
-      },
+    filters: {
+      ...state.filters,
+      resetFilters: true,
     },
   };
 };

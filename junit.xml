@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="2" errors="0" time="6.279">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-05-18T17:09:07" time="2.115" tests="1">
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.203">
+    </testcase>
+  </testsuite>
+  <testsuite name="useProduct hook" errors="0" failures="2" skipped="0" timestamp="2022-05-18T17:09:07" time="4.394" tests="2">
+    <testcase classname="useProduct hook if getProduct is called, products data in state should be populate" name="useProduct hook if getProduct is called, products data in state should be populate" time="1.089">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 3
++ Received  + 1
+
+- Array [
+-   &quot;1&quot;,
+- ]
++ Array []
+
+Ignored nodes: comments, &lt;script /&gt;, &lt;style /&gt;
+&lt;html
+  data-theme=&quot;light&quot;
+  style=&quot;--chakra-ui-color-mode: light;&quot;
+&gt;
+  &lt;head /&gt;
+  &lt;body
+    class=&quot;chakra-ui-light&quot;
+  &gt;
+    &lt;div
+      id=&quot;chakra-toast-portal&quot;
+    &gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top-left&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top-right&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom-left&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom-right&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;...
+    at D:\VLK studio\PhotoSi\product-archive\src\hook\useProduct.test.ts:35:42
+    at runWithExpensiveErrorDiagnosticsDisabled (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\config.js:50:12)
+    at checkCallback (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\wait-for.js:141:77)
+    at checkRealTimersCallback (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\wait-for.js:133:16)
+    at Timeout.task [as _onTimeout] (D:\VLK studio\PhotoSi\product-archive\node_modules\jsdom\lib\jsdom\browser\Window.js:516:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
+    </testcase>
+    <testcase classname="useProduct hook if getSingle is called, products data in state should be populate" name="useProduct hook if getSingle is called, products data in state should be populate" time="1.071">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 3
++ Received  + 1
+
+- Array [
+-   &quot;1&quot;,
+- ]
++ Array []
+
+Ignored nodes: comments, &lt;script /&gt;, &lt;style /&gt;
+&lt;html
+  data-theme=&quot;light&quot;
+  style=&quot;--chakra-ui-color-mode: light;&quot;
+&gt;
+  &lt;head /&gt;
+  &lt;body
+    class=&quot;chakra-ui-light&quot;
+  &gt;
+    &lt;div
+      id=&quot;chakra-toast-portal&quot;
+    &gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top-left&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-top-right&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom-left&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        id=&quot;chakra-toast-manager-bottom-right&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;...
+    at D:\VLK studio\PhotoSi\product-archive\src\hook\useProduct.test.ts:44:42
+    at runWithExpensiveErrorDiagnosticsDisabled (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\config.js:50:12)
+    at checkCallback (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\wait-for.js:141:77)
+    at checkRealTimersCallback (D:\VLK studio\PhotoSi\product-archive\node_modules\@testing-library\dom\dist\wait-for.js:133:16)
+    at Timeout.task [as _onTimeout] (D:\VLK studio\PhotoSi\product-archive\node_modules\jsdom\lib\jsdom\browser\Window.js:516:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

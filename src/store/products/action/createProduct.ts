@@ -9,10 +9,9 @@ export const createProductTrigger = createAction<
   CREATE_PRODUCT_ACTION_TYPES.TRIGGER
 >(CREATE_PRODUCT_ACTION_TYPES.TRIGGER);
 
-export const createProductRequest = createAction<
-  CreateProductPayload,
+export const createProductRequest = createAction(
   CREATE_PRODUCT_ACTION_TYPES.REQUEST
->(CREATE_PRODUCT_ACTION_TYPES.REQUEST);
+);
 
 export const createProductSuccess = createAction(
   CREATE_PRODUCT_ACTION_TYPES.SUCCESS

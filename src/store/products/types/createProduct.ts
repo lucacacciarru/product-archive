@@ -8,16 +8,16 @@ export enum CREATE_PRODUCT_ACTION_TYPES {
   FAILURE = "product/create/failure",
 }
 
-export type CreateProductPayload = Product;
+export type ProductWithoutId = Omit<Product, "id">;
+
+export type CreateProductPayload = ProductWithoutId;
 
 export type CreateProductAction = PayloadAction<
   CreateProductPayload,
   CREATE_PRODUCT_ACTION_TYPES.TRIGGER
 >;
-export type CreateProductRequestAction = PayloadAction<
-  CreateProductPayload,
-  CREATE_PRODUCT_ACTION_TYPES.REQUEST
->;
+export type CreateProductRequestAction =
+  Action<CREATE_PRODUCT_ACTION_TYPES.REQUEST>;
 
 export type CreateProductSuccessAction =
   Action<CREATE_PRODUCT_ACTION_TYPES.SUCCESS>;
