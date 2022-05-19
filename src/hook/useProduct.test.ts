@@ -3,7 +3,7 @@ import { getProductAllIds, getProducts } from "../store/products/selectors";
 import { getFilters } from "../store/products/selectors/getFilters";
 import { Product, ProductState } from "../store/products/types";
 import { renderHook, act, waitFor } from "../testConfig/customRenderHook";
-import { useProduct } from "./useProduct";
+import { useGetProduct, useProduct } from "./useProduct";
 
 function mockFetch(response?: any) {
   fetchMock.doMock(() =>
@@ -39,13 +39,9 @@ const MOCK_RES: Product = {
   title: "Test",
 };
 function useMockHook() {
-  const {
-    createProduct,
-    getProduct,
-    getSingleProduct,
-    updateFilter,
-    updateProduct,
-  } = useProduct();
+  const { createProduct, getProduct, updateFilter, updateProduct } =
+    useProduct();
+  const getSingleProduct = useGetProduct();
   const allProducts = useSelector(getProducts);
   const ids = useSelector(getProductAllIds);
   const byId = useSelector(getProducts);
@@ -72,15 +68,6 @@ describe("useProduct hook", () => {
 
     await waitFor(() => {
       expect(result.current.ids).toEqual(["1"]);
-    });
-  });
-  test("if getSingleProduct is called, products data in state should be populate with specific Product", async () => {
-    mockFetch(MOCK_RES);
-    const { result } = renderHook(() => useMockHook());
-    act(() => result.current.getSingleProduct("1"));
-
-    await waitFor(() => {
-      expect(result.current.byId).toEqual([MOCK_RES]);
     });
   });
 

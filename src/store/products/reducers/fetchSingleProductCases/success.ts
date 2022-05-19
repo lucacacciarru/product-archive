@@ -9,7 +9,7 @@ export const successCase: CaseReducer<
   return {
     ...state,
     data: {
-      allIds: [...state.data.allIds, action.payload.id],
+      ...state.data,
       byId: {
         ...state.data.byId,
         [action.payload.id]: {
