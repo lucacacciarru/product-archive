@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { createProductTrigger } from "../store/products/action/createProduct";
 import { fetchProductTrigger } from "../store/products/action/fetchProduct";
@@ -7,15 +8,19 @@ import { updateProductTrigger } from "../store/products/action/updateProduct";
 import { Filters, Product } from "../store/products/types";
 import { ProductWithoutId } from "../store/products/types/createProduct";
 
+export function useGetProduct() {
+  const dispatch = useDispatch();
+  return useCallback(
+    (id: string) => dispatch(fetchSingleProductTrigger({ id })),
+    [dispatch]
+  );
+}
+
 export function useProduct() {
   const dispatch = useDispatch();
 
   function getProduct() {
     dispatch(fetchProductTrigger());
-  }
-
-  function getSingleProduct(id: string) {
-    dispatch(fetchSingleProductTrigger({ id }));
   }
 
   function createProduct(product: ProductWithoutId) {
@@ -34,7 +39,6 @@ export function useProduct() {
     getProduct,
     createProduct,
     updateProduct,
-    getSingleProduct,
     updateFilter,
   };
 }
