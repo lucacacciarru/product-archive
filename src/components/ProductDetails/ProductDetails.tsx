@@ -17,6 +17,7 @@ export const ProductDetails: React.FC = () => {
       ),
     [selectedProduct]
   );
+
   return (
     <Stack gap="6" pb="20">
       {renderProduct}
