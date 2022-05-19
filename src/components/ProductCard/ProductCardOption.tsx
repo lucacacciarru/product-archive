@@ -6,10 +6,15 @@ import {
   MenuList,
   useDisclosure,
 } from "@chakra-ui/react";
-import { EditProductModal } from "../ActionProductModal";
+import { Link } from "react-router-dom";
+import { EditProductModal } from "../EditProductModal";
 import { Icon } from "../Icon";
 
-export const ProductCardOption: React.FC = () => {
+type Props = {
+  id: string;
+};
+
+export const ProductCardOption: React.FC<Props> = ({ id }) => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
@@ -21,11 +26,13 @@ export const ProductCardOption: React.FC = () => {
           </MenuButton>
           <MenuList>
             <MenuItem onClick={onOpen}>Edit</MenuItem>
-            <MenuItem>Show page</MenuItem>
+            <MenuItem>
+              <Link to={`/${id}`}>Show details</Link>
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>
-      <EditProductModal isOpen={isOpen} onClose={onClose} />
+      <EditProductModal id={id} isOpen={isOpen} onClose={onClose} />
     </>
   );
 };

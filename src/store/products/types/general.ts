@@ -12,7 +12,13 @@ export type ProductData = {
   byId: Record<string, Product>;
 };
 
+export type Filters = {
+  text: string;
+  category: string;
+};
+
 export type ProductState = {
   data: ProductData;
   rollbackData?: ProductData;
+  filters: Filters;
 };

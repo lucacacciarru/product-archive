@@ -1,5 +1,3 @@
-import { ProductState } from "../types/general";
+import { DefaultRootState } from "react-redux";
 
-type State = { product: ProductState };
-
-export const baseSelector = (state: State) => state.product;
+export const baseSelector = (state: DefaultRootState) => state.products;

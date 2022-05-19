@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
+import { categoriesRootReducer } from "./categories/rootReducer";
 import { productRootReducer } from "./products/reducers/rootReducer";
 
 const reducers = {
-  product: productRootReducer,
+  products: productRootReducer,
+  categories: categoriesRootReducer,
 };
 
 declare module "react-redux" {

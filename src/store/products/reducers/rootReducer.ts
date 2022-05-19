@@ -2,6 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 import * as fetchProductCase from "./fetchProductCases";
 import * as createProductCase from "./createProductCases";
 import * as updateProductCase from "./updateProductCase";
+import * as fetchSingleProductCase from "./fetchSingleProductCases";
 import {
   fetchProductFailure,
   fetchProductRequest,
@@ -18,11 +19,23 @@ import {
   updateProductRequest,
   updateProductSuccess,
 } from "../action/updateProduct";
+import {
+  fetchSingleProductFailure,
+  fetchSingleProductRequest,
+  fetchSingleProductSuccess,
+} from "../action/fetchSingleProduct";
+import { resetFilters, updateFilters } from "../action/filters";
+import { updateFilterCase } from "./updateFilterCase";
+import { resetFilterCase } from "./resetFilterCase";
 
 const INITIAL_STATE: ProductState = {
   data: {
     allIds: [],
     byId: {},
+  },
+  filters: {
+    category: "",
+    text: "",
   },
 };
 export const productRootReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -36,10 +49,10 @@ export const productRootReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(updateProductRequest, updateProductCase.requestCase)
     .addCase(updateProductSuccess, updateProductCase.successCase)
     .addCase(updateProductFailure, updateProductCase.failureCase)
+    .addCase(fetchSingleProductRequest, fetchSingleProductCase.requestCase)
+    .addCase(fetchSingleProductSuccess, fetchSingleProductCase.successCase)
+    .addCase(fetchSingleProductFailure, fetchSingleProductCase.failureCase)
+    .addCase(updateFilters, updateFilterCase)
+    .addCase(resetFilters, resetFilterCase)
     .addDefaultCase((state) => state);
 });
-
-// {
-//   type: 'product/update/trigger',
-//     payload: {id: '1', properties: {category: 'Luca'}}
-// }

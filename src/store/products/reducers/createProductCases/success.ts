@@ -8,4 +8,8 @@ export const successCase: CaseReducer<
 > = (state) => ({
   ...state,
   rollbackData: undefined,
+  filters: {
+    ...state.filters,
+    resetFilters: false,
+  },
 });

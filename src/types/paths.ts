@@ -1,4 +1,4 @@
 export enum PATHS {
   INDEX = "/",
-  PRODUCT = ":id",
+  PRODUCT = "product",
 }

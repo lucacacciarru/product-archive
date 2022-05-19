@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { Product } from "../../store/products/types";
+import { PATHS } from "../../types";
 import { ProductCardOption } from "./ProductCardOption";
 
 const stackProps: BoxProps = {
@@ -18,10 +19,12 @@ const stackProps: BoxProps = {
   py: "8",
   px: "4",
   borderRadius: "lg",
-  border: "2px solid black ",
+  borderWidth: "2px",
+  borderColor: "black.20",
   bg: "white.0",
   boxShadow: "xl",
   position: "relative",
+  _hover: { borderColor: "black.0" },
 };
 
 const cutText: TextProps = {
@@ -34,7 +37,6 @@ const cutText: TextProps = {
 
 export const ProductCard: React.FC<Product> = ({
   category,
-  description,
   image,
   price,
   title,
@@ -42,9 +44,9 @@ export const ProductCard: React.FC<Product> = ({
 }) => {
   return (
     <Stack {...stackProps}>
-      <ProductCardOption />
+      <ProductCardOption id={id} />
       <LinkBox>
-        <Link to={`/${id}`}>
+        <Link to={`/${PATHS.PRODUCT}/${id}`}>
           <Box>
             <Tag>{category}</Tag>
           </Box>

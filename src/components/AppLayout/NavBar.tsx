@@ -2,7 +2,6 @@ import {
   BoxProps,
   HStack,
   LinkBox,
-  LinkOverlay,
   Portal,
   PortalManager,
 } from "@chakra-ui/react";
